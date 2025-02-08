@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 
 export default function CheckBoxLabel(props) {
-    const [check, setCheck] = useState(false)
+    const [check, setCheck] = useState(null)
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
@@ -13,10 +13,12 @@ export default function CheckBoxLabel(props) {
     }, [])
 
     useEffect(() => {
-        if (typeof window !== 'undefined') {
+        if (check !== null) {
             localStorage.setItem(props.id, check.toString())
         }
     }, [check])
+
+    if (check === null) return null
 
     return (
         <abbr className='no-underline' title={props.description}>

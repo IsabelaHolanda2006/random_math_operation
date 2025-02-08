@@ -3,12 +3,14 @@
 import { number, randomInt } from "mathjs"
 import { useEffect, useRef, useState } from "react"
 import RandomizedOperation from "@/app/hooks/RandomizedOperation"
+import { useRouter } from "next/navigation"
 
 export default function OperationPage() {
     const [pageOperation, setPageOperation] = useState(null)
     const inputText = useRef()
     const youWinLose = useRef()
     const btnRefresh = useRef()
+    const router = useRouter()
 
     useEffect(() => {
         if (typeof window !== 'undefined' && !sessionStorage.getItem('operation')) {
@@ -85,6 +87,13 @@ export default function OperationPage() {
         }
     }
 
+    function confirmExit() {
+        if (confirm('are you sure that you want to back to the main page? (the operation will be reseted, it may be not the same)')) {
+            sessionStorage.clear()
+            router.push('/')
+        }
+    }
+
     return (
         <main className='flex flex-col items-center'>
             <div className='text-2xl text-center'>
@@ -93,9 +102,12 @@ export default function OperationPage() {
             </div>
             <input ref={inputText} className='rounded-lg p-2 bg-[--color-obj] text-[--color-text] text-center' type='text' maxLength={5} placeholder='Type the answer...' />
             <button onClick={(e) => checkAnswer(e)} className='mt-2 w-36 p-1 bg-[--color-btn] border-4 rounded-lg border-transparent'>Confirm</button>
+
             <button ref={btnRefresh} onClick={() => { sessionStorage.clear(); window.location.reload() }} className='hidden mt-4 w-24 p-1 bg-[--color-btn] rounded-lg '>
                 Next
             </button>
+
+            <button onClick={confirmExit} className="mt-7 w-24 p-1 bg-[--color-btn] rounded-lg">Back to main page</button>
         </main>
 
     )
