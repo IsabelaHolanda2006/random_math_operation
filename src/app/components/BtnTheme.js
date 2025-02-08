@@ -5,8 +5,8 @@ import Themes from '../hooks/Themes.js'
 
 export default function BtnTheme() {
     const [theme, setTheme] = useState(null)
-    const BtnLight = './light_mode.svg#btnLight'
-    const BtnDark = './dark_mode.svg#btnDark'
+    const BtnLight = '/random_math_operation/images/light_mode.svg#btnLight'
+    const BtnDark = '/random_math_operation/images/dark_mode.svg#btnDark'
 
     useEffect(() => {
         const storedTheme = localStorage.getItem('theme')

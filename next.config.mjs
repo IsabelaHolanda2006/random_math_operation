@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: "export",
+    // output: "export",
     basePath: "/random_math_operation",
     trailingSlash: true,
 };
