@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: LoveYaLikeSister;
-    src: url("/fonts/LoveYaLikeASister-Regular.ttf") format("truetype");
+    src: url("../app/fonts/LoveYaLikeASister-Regular.ttf") format("truetype");
 }
 
 .bg-image {
