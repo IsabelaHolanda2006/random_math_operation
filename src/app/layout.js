@@ -1,6 +1,13 @@
 import NavBar from "./components/NavBar";
 import "./globals.css";
 
+export const metadata = {
+  title: "Random Math Operation",
+  description: "A simple, fast and practical way to generate random math operations, made to you have fun and practice more math!",
+  keywords: "random math operation, math, numbers, math game, github math game, operation generator",
+  author: "Isabela Holanda",
+}
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
