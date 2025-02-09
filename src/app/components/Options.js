@@ -26,8 +26,8 @@ export default function Options() {
                     {/* TODO: regional decimal point option (exemple: '.' and ',') */}
                     {/* TODO: Option to add lives to the user, if zero, will be game over */}
                     <NumberInput />
-                    <RangeInput id='minRange' label='Min Range' />
-                    <RangeInput id='maxRange' label='Max Range' />
+                    <RangeInput id='minRange' label='Min' />
+                    <RangeInput id='maxRange' label='Max' />
                 </div>
             </div>
         </main>
