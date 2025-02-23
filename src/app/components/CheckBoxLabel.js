@@ -23,7 +23,7 @@ export default function CheckBoxLabel(props) {
     return (
         <abbr className='no-underline' title={props.description}>
             <label>
-                <input id={props.id} checked={check} onChange={() => setCheck(!check)} className='w-7 h-7 mt-4 accent-[--color-bg]' type='checkbox' ></input>
+                <input checked={check} onChange={() => setCheck(!check)} className='w-7 h-7 mt-4 accent-[--color-bg]' type='checkbox' ></input>
                 <div>{props.label}</div>
             </label>
         </abbr>

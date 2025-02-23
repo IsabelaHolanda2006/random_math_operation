@@ -2,19 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-    font-family: LoveYaLikeSister;
-    src: url("../app/fonts/LoveYaLikeASister-Regular.ttf") format("truetype");
-}
-
-.bg-image {
-    fill: var(--color-text);
-}
-
 :root {
     --color-bg: #cad5e2;
     --color-text: #000000;
     --color-obj: #0f172b;
     --color-btn: #d1d5dc;
     --color-shadow: #000000;
+    --toggle-size: 40%;
+}
+
+*::-webkit-scrollbar {
+    background-color: var(--color-btn);
+    scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--color-obj)
+}
+
+
+
+@supports not (-webkit-box-reflect: right) {
+    * {
+        scrollbar-color: var(--color-shadow) var(--color-obj);
+        scrollbar-width: thin;
+    }
+}
+
+@font-face {
+    font-family: LoveYaLikeSister;
+    src: url("../app/fonts/LoveYaLikeASister-Regular.ttf") format("truetype");
 }

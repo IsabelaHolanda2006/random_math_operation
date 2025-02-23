@@ -5,8 +5,8 @@ import Themes from '../hooks/Themes.js'
 
 export default function BtnTheme() {
     const [theme, setTheme] = useState(null)
-    const BtnLight = '/random_math_operation/images/light_mode.svg#btnLight'
-    const BtnDark = '/random_math_operation/images/dark_mode.svg#btnDark'
+    const BtnLight = '/images/light_mode.svg#btnLight'
+    const BtnDark = '/images/dark_mode.svg#btnDark'
 
     useEffect(() => {
         const storedTheme = localStorage.getItem('theme')
@@ -32,18 +32,17 @@ export default function BtnTheme() {
         }
     }, [theme])
 
-    if (theme === null) return null
-
     return (
         <div className='flex gap-5'>
-            <button
-                onClick={() => {
-                    // TODO: add system default theme button
-                    const newTheme = theme === 'light' ? 'dark' : 'light'
-                    setTheme(newTheme)
-                }} >
-                <svg className='fill-[--color-text]' width='24' height='24'><use href={theme === 'light' ? BtnDark : BtnLight} /></svg>
-            </button>
+            {theme &&
+                <button
+                    onClick={() => {
+                        // TODO: add system default theme button
+                        const newTheme = theme === 'light' ? 'dark' : 'light'
+                        setTheme(newTheme)
+                    }} >
+                    <svg className='fill-[--color-text] hover:animate-pulse' width={24} height={24}><use href={theme === 'light' ? BtnDark : BtnLight} /></svg>
+                </button>}
         </div>
     )
 }

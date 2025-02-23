@@ -24,7 +24,7 @@ export default function OperationPage() {
                 const getOperation = operationString(numbers(), operators(), fullOperation(), result())
                 const operation = getOperation.getOperation()
                 const xValue = getOperation.getXValue()
-                sessionStorage.setItem('operation', operation)
+                sessionStorage.setItem('operation', localStorage.getItem('decimalPoint') === 'true' ? operation.replace('.', ',') : operation)
                 sessionStorage.setItem('xValue', xValue)
             }
 
@@ -107,7 +107,7 @@ export default function OperationPage() {
                 Next
             </button>
 
-            <button onClick={confirmExit} className="mt-7 w-24 p-1 bg-[--color-btn] rounded-lg">Back to main page</button>
+            <button onClick={confirmExit} className="mt-7 w-24 p-1 bg-[--color-btn] rounded-lg">Back to the main page</button>
         </main>
 
     )

@@ -16,6 +16,7 @@ export default function RootLayout({ children }) {
           <NavBar />
         </div>
         <div className='mb-5 flex flex-1 items-center justify-center'>
+
           <svg id="bg_image" xmlns="http://www.w3.org/2000/svg" width='200%' height='200%' className='fixed flex flex-1 fill-[--color-btn] -z-10'>
             <pattern id="bg-image" width="100" height="100" patternUnits="userSpaceOnUse">
               <text x="25" y="25" fontSize="20">

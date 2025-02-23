@@ -17,9 +17,9 @@ A simple, fast and practical way to generate random math operations, made to you
 - [ ] add order symbols: (round brackets) [square brackets] {curly brackets}.
 - [ ] add more interactivity to the site.
 - [ ] add more themes (like a blue or system default theme).
-- [ ] add a regional decimal point option (exemple: '.' and ',' depending on user choice).
+- [x] ~add a regional decimal point option (exemple: '.' and ',' depending on user choice).~
 - [ ] option to add lives to the user, if zero, will be game over.
-- [ ] add a more options button in the NavBar (like more themes and the decimal point option).
+- [x] ~add a more options button in the NavBar (like more themes and the decimal point option).~
 
 <div style="text-align: center;">
     <img src="./docs/game.gif" width="500">
