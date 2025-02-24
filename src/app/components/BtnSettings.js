@@ -5,7 +5,7 @@ import ToggleSlide from "./ToggleSlide"
 
 export default function BtnSettings() {
     const settingsDialog = useRef()
-    const settings = '/images/settings.svg#settings'
+    const settings = '/random_math_operation/images/settings.svg#settings'
     const [isMounted, setIsMounted] = useState(false)
 
     useEffect(() => {
