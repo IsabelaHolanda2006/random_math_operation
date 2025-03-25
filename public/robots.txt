@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://isabelaholanda2006.github.io/random_math_operation/
+
+# Sitemaps
+Sitemap: https://isabelaholanda2006.github.io/random_math_operation/sitemap.xml
